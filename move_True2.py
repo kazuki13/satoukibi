@@ -2,6 +2,7 @@ import cv2
 # 動画ファイルを取得
 cap = cv2.VideoCapture(0)   
 
+
 # FPSを取得
 fps = int(cap.get(cv2.CAP_PROP_FPS)) 
   
@@ -14,7 +15,7 @@ h = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 fourcc = cv2.VideoWriter_fourcc('m', 'p', '4', 'v') 
 # writer2 = cv2.VideoWriter('test' +'/' +  'test3' + '/' + 'video2.m4v', fourcc, fps, (w, h))
 def move_True2():    
-    writer2 = cv2.VideoWriter('サトウキビプロジェクト' +'/' +  '秒数指定動画' + '/' + 'video2.m4v', fourcc, fps, (w, h))
+    writer2 = cv2.VideoWriter('satoukibi' +'/' +  'move_time' + '/' + 'video2.m4v', fourcc, fps, (w, h))
     roop = int(fps * 15)
     for i in range(roop):
         ret, img = cap.read()

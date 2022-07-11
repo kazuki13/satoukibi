@@ -4,6 +4,7 @@ import tkinter as tk
 import os
 import move_True2
 import picture
+
 def picture():
     cap = cv2.VideoCapture(0)  
     while True:
@@ -16,7 +17,7 @@ def picture():
 
         
             #  ーーpng形式での保存ーー
-            cv2.imwrite('サトウキビプロジェクト' +'/' +  '写真' + '/' + fileName, img)
+            cv2.imwrite('satoukibi' +'/' +  'picture' + '/' + fileName, img)
         key2 = cv2.waitKey(1)
         if key2 == 27:
             break

@@ -6,6 +6,7 @@ import move_True1
 import move_True2
 import picture
 
+
 # # 動画ファイルを取得
 # cap = cv2.VideoCapture(0)   
 
@@ -24,14 +25,14 @@ import picture
 
 
 cap = cv2.VideoCapture(0)
-if not os.path.exists('サトウキビプロジェクト'):
-    os.mkdir('サトウキビプロジェクト')
-if not os.path.exists('./サトウキビプロジェクト/写真'):
-    os.mkdir('./サトウキビプロジェクト/写真')
-if not os.path.exists('./サトウキビプロジェクト/動画'):
-    os.mkdir('./サトウキビプロジェクト/動画')
-if not os.path.exists('./サトウキビプロジェクト/秒数指定動画'):
-    os.mkdir('./サトウキビプロジェクト/秒数指定動画')
+if not os.path.exists('satoukibi'):
+    os.mkdir('satoukibi')
+if not os.path.exists('./satoukibi/picture'):
+    os.mkdir('./satoukibi/picture')
+if not os.path.exists('./satoukibi/move'):
+    os.mkdir('./satoukibi/move')
+if not os.path.exists('./satoukibi/move_time'):
+    os.mkdir('./satoukibi/move_time')
 # writer = cv2.VideoWriter('test' +'/' +  'test2' + '/' + 'video.m4v', fourcc, fps, (w, h))  
 # writer2 = cv2.VideoWriter('test' +'/' +  'test3' + '/' + 'video2.m4v', fourcc, fps, (w, h))
 

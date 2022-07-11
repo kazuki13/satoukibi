@@ -3,6 +3,7 @@ import cv2
 import datetime
 import tkinter as tk
 import os
+
 def move_True1():
     # 動画ファイルを取得
     cap = cv2.VideoCapture(0)   
@@ -17,7 +18,7 @@ def move_True1():
 
     # 動画保存時のfourcc設定（mp4用）
     fourcc = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')
-    writer = cv2.VideoWriter('サトウキビプロジェクト' +'/' +  '動画' + '/' + 'video.m4v', fourcc, fps, (w, h))
+    writer = cv2.VideoWriter('satoukibi' +'/' +  'move' + '/' + 'video.m4v', fourcc, fps, (w, h))
     while True:
         ret, img = cap.read()
         cv2.imshow('video', img)
