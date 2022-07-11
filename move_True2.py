@@ -16,7 +16,8 @@ fourcc = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')
 # writer2 = cv2.VideoWriter('test' +'/' +  'test3' + '/' + 'video2.m4v', fourcc, fps, (w, h))
 def move_True2():    
     writer2 = cv2.VideoWriter('satoukibi' +'/' +  'move_time' + '/' + 'video2.m4v', fourcc, fps, (w, h))
-    roop = int(fps * 15)
+    count = int(input("取る秒数入力"))
+    roop = int(fps * count)
     for i in range(roop):
         ret, img = cap.read()
         cv2.imshow('video image', img)
