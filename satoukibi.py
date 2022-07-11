@@ -5,6 +5,7 @@ import os
 import move_True1
 import move_True2
 import picture
+import picture_number
 
 
 # # 動画ファイルを取得
@@ -33,6 +34,8 @@ if not os.path.exists('./satoukibi/move'):
     os.mkdir('./satoukibi/move')
 if not os.path.exists('./satoukibi/move_time'):
     os.mkdir('./satoukibi/move_time')
+if not os.path.exists('./satoukibi/picture_number'):
+    os.mkdir('./satoukibi/picture_number')
 # writer = cv2.VideoWriter('test' +'/' +  'test2' + '/' + 'video.m4v', fourcc, fps, (w, h))  
 # writer2 = cv2.VideoWriter('test' +'/' +  'test3' + '/' + 'video2.m4v', fourcc, fps, (w, h))
 
@@ -46,7 +49,7 @@ def search():
 # rootメインウィンドウの設定
 root = tk.Tk()
 root.title("tkinter application")
-root.geometry("200x100")
+root.geometry("200x200")
 
 # メインフレームの作成と設置
 frame = ttk.Frame(root)
@@ -59,16 +62,20 @@ text2 = tk.StringVar(frame)
 text2.set("15秒動画撮影")
 text3 = tk.StringVar(frame)
 text3.set("写真")
+text4 = tk.StringVar(frame)
+text4.set("写真:枚数指定")
 # 各種ウィジェットの作成
 
 button = tk.Button(frame, textvariable=text, command=move_True1.move_True1)
 button2 = tk.Button(frame, textvariable=text2, command=move_True2.move_True2)
 button3 = tk.Button(frame, textvariable=text3, command=picture.picture)
+button4 = tk.Button(frame, textvariable=text4, command=picture_number.picture_number)
 
 # 各種ウィジェットの設置
 button.pack()
 button2.pack()
 button3.pack()
+button4.pack()
 
 
 root.mainloop()
